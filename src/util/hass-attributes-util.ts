@@ -48,6 +48,7 @@ const hassAttributeUtil = {
       "door",
       "garage",
       "gate",
+      "screen",
       "shade",
       "shutter",
       "window",

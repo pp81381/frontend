@@ -101,6 +101,17 @@ export const coverIcon = (state?: string, stateObj?: HassEntity): string => {
         default:
           return mdiWindowOpen;
       }
+    case "screen":
+      switch (state) {
+        case "opening":
+          return "hass:arrow-down-box";
+        case "closing":
+          return "hass:arrow-up-box";
+        case "closed":
+          return "hass:projector-screen-outline";
+        default:
+          return "hass:projector-screen";
+      }
   }
 
   switch (state) {
@@ -121,6 +132,8 @@ export const computeOpenIcon = (stateObj: HassEntity): string => {
     case "door":
     case "gate":
       return mdiArrowExpandHorizontal;
+    case "screen":
+      return "hass:arrow-down";
     default:
       return mdiArrowUp;
   }
@@ -132,6 +145,8 @@ export const computeCloseIcon = (stateObj: HassEntity): string => {
     case "door":
     case "gate":
       return mdiArrowCollapseHorizontal;
+    case "screen":
+      return "hass:arrow-up";
     default:
       return mdiArrowDown;
   }
