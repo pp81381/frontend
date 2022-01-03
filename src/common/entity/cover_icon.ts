@@ -24,6 +24,8 @@ import {
   mdiArrowSplitVertical,
   mdiCurtains,
   mdiCurtainsClosed,
+  mdiProjectorScreenVariantOutline,
+  mdiProjectorScreenVariantOffOutline,
 } from "@mdi/js";
 import { HassEntity } from "home-assistant-js-websocket";
 
@@ -104,13 +106,13 @@ export const coverIcon = (state?: string, stateObj?: HassEntity): string => {
     case "screen":
       switch (state) {
         case "opening":
-          return "hass:arrow-down-box";
+          return mdiArrowDownBox;
         case "closing":
-          return "hass:arrow-up-box";
+          return mdiArrowUpBox;
         case "closed":
-          return "hass:projector-screen-outline";
+          return mdiProjectorScreenVariantOffOutline;
         default:
-          return "hass:projector-screen";
+          return mdiProjectorScreenVariantOutline;
       }
   }
 
