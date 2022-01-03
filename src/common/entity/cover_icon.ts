@@ -135,7 +135,7 @@ export const computeOpenIcon = (stateObj: HassEntity): string => {
     case "gate":
       return mdiArrowExpandHorizontal;
     case "screen":
-      return "hass:arrow-down";
+      return mdiArrowDown;
     default:
       return mdiArrowUp;
   }
@@ -148,7 +148,7 @@ export const computeCloseIcon = (stateObj: HassEntity): string => {
     case "gate":
       return mdiArrowCollapseHorizontal;
     case "screen":
-      return "hass:arrow-up";
+      return mdiArrowUp;
     default:
       return mdiArrowDown;
   }
