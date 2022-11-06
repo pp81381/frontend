@@ -57,6 +57,9 @@ export class StateBadge extends LitElement {
           : undefined
       )}
       data-state=${stateObj ? computeActiveState(stateObj) : ""}
+      device-class=${ifDefined(
+        stateObj ? stateObj.attributes.device_class : ""
+      )}
       .icon=${this.overrideIcon}
       .state=${stateObj}
     ></ha-state-icon>`;
