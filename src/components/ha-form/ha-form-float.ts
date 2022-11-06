@@ -61,7 +61,7 @@ export class HaFormFloat extends LitElement implements HaFormElement {
         value = undefined;
       }
     }
-
+    /*    
     // Detect anything changed
     if (this.data === value) {
       // parseFloat will drop invalid text at the end, in that case update textfield
@@ -71,7 +71,7 @@ export class HaFormFloat extends LitElement implements HaFormElement {
       }
       return;
     }
-
+*/
     fireEvent(this, "value-changed", {
       value,
     });
