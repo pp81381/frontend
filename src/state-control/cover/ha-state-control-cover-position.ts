@@ -61,6 +61,7 @@ export class HaStateControlCoverPosition extends LitElement {
           "--control-slider-background": color,
         })}
         .disabled=${this.stateObj.state === UNAVAILABLE}
+        .inverted="invertUpDown(${this.stateObj})"
         .unit=${DOMAIN_ATTRIBUTES_UNITS.cover.current_position}
         .locale=${this.hass.locale}
       >
